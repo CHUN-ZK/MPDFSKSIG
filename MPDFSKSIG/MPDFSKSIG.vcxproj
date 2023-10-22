@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{70c110e1-c36d-41d8-bafc-1b132977f6f7}</ProjectGuid>
+    <RootNamespace>MPDFSKSIG</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>espresso\src;D:\boost_1_82_0;oneapi\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>espresso\lib;oneapi\lib\intel64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ESPRESSO.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="espresso\src\black_white.c" />
+    <ClCompile Include="espresso\src\canonical.c" />
+    <ClCompile Include="espresso\src\cofactor.c" />
+    <ClCompile Include="espresso\src\cols.c" />
+    <ClCompile Include="espresso\src\compl.c" />
+    <ClCompile Include="espresso\src\contain.c" />
+    <ClCompile Include="espresso\src\cpu_time.c" />
+    <ClCompile Include="espresso\src\cubestr.c" />
+    <ClCompile Include="espresso\src\cvrin.c" />
+    <ClCompile Include="espresso\src\cvrm.c" />
+    <ClCompile Include="espresso\src\cvrmisc.c" />
+    <ClCompile Include="espresso\src\cvrout.c" />
+    <ClCompile Include="espresso\src\dominate.c" />
+    <ClCompile Include="espresso\src\equiv.c" />
+    <ClCompile Include="espresso\src\espresso.c" />
+    <ClCompile Include="espresso\src\essen.c" />
+    <ClCompile Include="espresso\src\essentiality.c" />
+    <ClCompile Include="espresso\src\exact.c" />
+    <ClCompile Include="espresso\src\expand.c" />
+    <ClCompile Include="espresso\src\gasp.c" />
+    <ClCompile Include="espresso\src\gimpel.c" />
+    <ClCompile Include="espresso\src\globals.c" />
+    <ClCompile Include="espresso\src\hack.c" />
+    <ClCompile Include="espresso\src\indep.c" />
+    <ClCompile Include="espresso\src\irred.c" />
+    <ClCompile Include="espresso\src\map.c" />
+    <ClCompile Include="espresso\src\matrix.c" />
+    <ClCompile Include="espresso\src\mincov.c" />
+    <ClCompile Include="espresso\src\opo.c" />
+    <ClCompile Include="espresso\src\pair.c" />
+    <ClCompile Include="espresso\src\part.c" />
+    <ClCompile Include="espresso\src\primes.c" />
+    <ClCompile Include="espresso\src\prtime.c" />
+    <ClCompile Include="espresso\src\readfile.c" />
+    <ClCompile Include="espresso\src\reduce.c" />
+    <ClCompile Include="espresso\src\rows.c" />
+    <ClCompile Include="espresso\src\set.c" />
+    <ClCompile Include="espresso\src\setc.c" />
+    <ClCompile Include="espresso\src\sharp.c" />
+    <ClCompile Include="espresso\src\sigma.c" />
+    <ClCompile Include="espresso\src\signature.c" />
+    <ClCompile Include="espresso\src\signature_exact.c" />
+    <ClCompile Include="espresso\src\sminterf.c" />
+    <ClCompile Include="espresso\src\solution.c" />
+    <ClCompile Include="espresso\src\sparse.c" />
+    <ClCompile Include="espresso\src\strdup.c" />
+    <ClCompile Include="espresso\src\unate.c" />
+    <ClCompile Include="espresso\src\util_signature.c" />
+    <ClCompile Include="espresso\src\verify.c" />
+    <ClCompile Include="src\cppsym.cpp" />
+    <ClCompile Include="src\experiment.cpp" />
+    <ClCompile Include="src\GPLA.cpp" />
+    <ClCompile Include="src\ksig.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ompsym.cpp" />
+    <ClCompile Include="src\symmetry.cpp" />
+    <ClCompile Include="src\tbbsym.cpp" />
+    <ClCompile Include="src\testingcppsym.cpp" />
+    <ClCompile Include="src\tool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="espresso\src\copyright.h" />
+    <ClInclude Include="espresso\src\espresso.h" />
+    <ClInclude Include="espresso\src\mincov.h" />
+    <ClInclude Include="espresso\src\mincov_int.h" />
+    <ClInclude Include="espresso\src\port.h" />
+    <ClInclude Include="espresso\src\signature.h" />
+    <ClInclude Include="espresso\src\sparse.h" />
+    <ClInclude Include="espresso\src\sparse_int.h" />
+    <ClInclude Include="espresso\src\strdup.h" />
+    <ClInclude Include="espresso\src\utility.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_range.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_range2d.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_range3d.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_rangeNd.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\cache_aligned_allocator.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\collaborative_call_once.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\combinable.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_hash_map.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_lru_cache.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_map.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_priority_queue.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_queue.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_set.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_unordered_map.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_unordered_set.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_vector.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_aggregator.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_aligned_space.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_allocator_traits.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_assert.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_attach.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_concurrent_queue_base.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_concurrent_skip_list.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_concurrent_unordered_base.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_config.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_containers_helpers.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_exception.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_export.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_body_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_cache_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_indexer_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_item_buffer_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_join_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_nodes_deduction.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_node_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_node_set_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_tagged_buffer_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_trace_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_types_impl.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_hash_compare.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_intrusive_list_node.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_machine.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_mutex_common.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_namespace_injection.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_node_handle.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_pipeline_filters.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_pipeline_filters_deduction.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_range_common.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_rtm_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_rtm_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_scoped_lock.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_segment_table.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_small_object_pool.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_string_resource.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_task.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_task_handle.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_template_helpers.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_utils.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_waitable_atomic.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\enumerable_thread_specific.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\flow_graph.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\flow_graph_abstractions.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\global_control.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\info.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\memory_pool.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\null_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\null_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_for.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_for_each.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_invoke.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_pipeline.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_reduce.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_scan.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_sort.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\partitioner.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\profiling.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\queuing_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\queuing_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\rw_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\scalable_allocator.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\spin_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\spin_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\task.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\task_arena.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\task_group.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\task_scheduler_observer.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\tbbmalloc_proxy.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\tbb_allocator.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\tick_count.h" />
+    <ClInclude Include="oneapi\include\oneapi\tbb\version.h" />
+    <ClInclude Include="oneapi\include\tbb\blocked_range.h" />
+    <ClInclude Include="oneapi\include\tbb\blocked_range2d.h" />
+    <ClInclude Include="oneapi\include\tbb\blocked_range3d.h" />
+    <ClInclude Include="oneapi\include\tbb\blocked_rangeNd.h" />
+    <ClInclude Include="oneapi\include\tbb\cache_aligned_allocator.h" />
+    <ClInclude Include="oneapi\include\tbb\collaborative_call_once.h" />
+    <ClInclude Include="oneapi\include\tbb\combinable.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_hash_map.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_lru_cache.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_map.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_priority_queue.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_queue.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_set.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_unordered_map.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_unordered_set.h" />
+    <ClInclude Include="oneapi\include\tbb\concurrent_vector.h" />
+    <ClInclude Include="oneapi\include\tbb\enumerable_thread_specific.h" />
+    <ClInclude Include="oneapi\include\tbb\flow_graph.h" />
+    <ClInclude Include="oneapi\include\tbb\flow_graph_abstractions.h" />
+    <ClInclude Include="oneapi\include\tbb\global_control.h" />
+    <ClInclude Include="oneapi\include\tbb\info.h" />
+    <ClInclude Include="oneapi\include\tbb\memory_pool.h" />
+    <ClInclude Include="oneapi\include\tbb\null_mutex.h" />
+    <ClInclude Include="oneapi\include\tbb\null_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_for.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_for_each.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_invoke.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_pipeline.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_reduce.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_scan.h" />
+    <ClInclude Include="oneapi\include\tbb\parallel_sort.h" />
+    <ClInclude Include="oneapi\include\tbb\partitioner.h" />
+    <ClInclude Include="oneapi\include\tbb\profiling.h" />
+    <ClInclude Include="oneapi\include\tbb\queuing_mutex.h" />
+    <ClInclude Include="oneapi\include\tbb\queuing_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\tbb\scalable_allocator.h" />
+    <ClInclude Include="oneapi\include\tbb\spin_mutex.h" />
+    <ClInclude Include="oneapi\include\tbb\spin_rw_mutex.h" />
+    <ClInclude Include="oneapi\include\tbb\task.h" />
+    <ClInclude Include="oneapi\include\tbb\task_arena.h" />
+    <ClInclude Include="oneapi\include\tbb\task_group.h" />
+    <ClInclude Include="oneapi\include\tbb\task_scheduler_observer.h" />
+    <ClInclude Include="oneapi\include\tbb\tbb.h" />
+    <ClInclude Include="oneapi\include\tbb\tbbmalloc_proxy.h" />
+    <ClInclude Include="oneapi\include\tbb\tbb_allocator.h" />
+    <ClInclude Include="oneapi\include\tbb\tick_count.h" />
+    <ClInclude Include="oneapi\include\tbb\version.h" />
+    <ClInclude Include="src\header.h" />
+    <ClInclude Include="src\main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="allpla\5xp1.pla" />
+    <None Include="allpla\9sym.pla" />
+    <None Include="allpla\al2.pla" />
+    <None Include="allpla\alcom.pla" />
+    <None Include="allpla\allc1908_g51.pla" />
+    <None Include="allpla\alu1.pla" />
+    <None Include="allpla\alu2.pla" />
+    <None Include="allpla\alu3.pla" />
+    <None Include="allpla\alu4.pla" />
+    <None Include="allpla\amd.pla" />
+    <None Include="allpla\apex1.pla" />
+    <None Include="allpla\apex2.pla" />
+    <None Include="allpla\apex3.pla" />
+    <None Include="allpla\apex4.pla" />
+    <None Include="allpla\apex5.pla" />
+    <None Include="allpla\apex6.pla" />
+    <None Include="allpla\apex7.pla" />
+    <None Include="allpla\apla.pla" />
+    <None Include="allpla\b1.pla" />
+    <None Include="allpla\b10.pla" />
+    <None Include="allpla\b11.pla" />
+    <None Include="allpla\b12.pla" />
+    <None Include="allpla\b2.pla" />
+    <None Include="allpla\b3.pla" />
+    <None Include="allpla\b4.pla" />
+    <None Include="allpla\b7.pla" />
+    <None Include="allpla\b9.pla" />
+    <None Include="allpla\bc0.pla" />
+    <None Include="allpla\bca.pla" />
+    <None Include="allpla\bcb.pla" />
+    <None Include="allpla\bcc.pla" />
+    <None Include="allpla\bcd.pla" />
+    <None Include="allpla\br1.pla" />
+    <None Include="allpla\br2.pla" />
+    <None Include="allpla\bw.pla" />
+    <None Include="allpla\C17.pla" />
+    <None Include="allpla\c1908_g51.pla" />
+    <None Include="allpla\c3540_g409.pla" />
+    <None Include="allpla\c8.pla" />
+    <None Include="allpla\cc.pla" />
+    <None Include="allpla\check.pla" />
+    <None Include="allpla\check2.pla" />
+    <None Include="allpla\check~.pla" />
+    <None Include="allpla\chkn.pla" />
+    <None Include="allpla\cht.pla" />
+    <None Include="allpla\clip.pla" />
+    <None Include="allpla\clpl.pla" />
+    <None Include="allpla\cm138a.pla" />
+    <None Include="allpla\cm150a.pla" />
+    <None Include="allpla\cm151a.pla" />
+    <None Include="allpla\cm152a.pla" />
+    <None Include="allpla\cm162a.pla" />
+    <None Include="allpla\cm163a.pla" />
+    <None Include="allpla\cm42a.pla" />
+    <None Include="allpla\cm82a.pla" />
+    <None Include="allpla\cm85a.pla" />
+    <None Include="allpla\cmb.pla" />
+    <None Include="allpla\con1.pla" />
+    <None Include="allpla\cordic.pla" />
+    <None Include="allpla\count.pla" />
+    <None Include="allpla\cps.pla" />
+    <None Include="allpla\cu.pla" />
+    <None Include="allpla\dalu.pla" />
+    <None Include="allpla\dc1.pla" />
+    <None Include="allpla\dc2.pla" />
+    <None Include="allpla\dekoder.pla" />
+    <None Include="allpla\dist.pla" />
+    <None Include="allpla\dk17.pla" />
+    <None Include="allpla\dk27.pla" />
+    <None Include="allpla\dk48.pla" />
+    <None Include="allpla\duke2.pla" />
+    <None Include="allpla\e64.pla" />
+    <None Include="allpla\ex1010.pla" />
+    <None Include="allpla\ex4.pla" />
+    <None Include="allpla\ex5.pla" />
+    <None Include="allpla\ex7.pla" />
+    <None Include="allpla\example2.pla" />
+    <None Include="allpla\exep.pla" />
+    <None Include="allpla\exp.pla" />
+    <None Include="allpla\exps.pla" />
+    <None Include="allpla\f51m.pla" />
+    <None Include="allpla\frg1.pla" />
+    <None Include="allpla\frg2.pla" />
+    <None Include="allpla\gary.pla" />
+    <None Include="allpla\i2.pla" />
+    <None Include="allpla\i5.pla" />
+    <None Include="allpla\i6.pla" />
+    <None Include="allpla\i7.pla" />
+    <None Include="allpla\i8.pla" />
+    <None Include="allpla\i9.pla" />
+    <None Include="allpla\ibm.pla" />
+    <None Include="allpla\in0.pla" />
+    <None Include="allpla\in1.pla" />
+    <None Include="allpla\in2.pla" />
+    <None Include="allpla\in3.pla" />
+    <None Include="allpla\in4.pla" />
+    <None Include="allpla\in5.pla" />
+    <None Include="allpla\in6.pla" />
+    <None Include="allpla\in7.pla" />
+    <None Include="allpla\inc.pla" />
+    <None Include="allpla\intb.pla" />
+    <None Include="allpla\jbp.pla" />
+    <None Include="allpla\k2.pla" />
+    <None Include="allpla\lal.pla" />
+    <None Include="allpla\lin.pla" />
+    <None Include="allpla\list.bat" />
+    <None Include="allpla\luc.pla" />
+    <None Include="allpla\m1.pla" />
+    <None Include="allpla\m2.pla" />
+    <None Include="allpla\m3.pla" />
+    <None Include="allpla\m4.pla" />
+    <None Include="allpla\mainpla.pla" />
+    <None Include="allpla\majority.pla" />
+    <None Include="allpla\mark1.pla" />
+    <None Include="allpla\max1024.pla" />
+    <None Include="allpla\max128.pla" />
+    <None Include="allpla\max46.pla" />
+    <None Include="allpla\max512.pla" />
+    <None Include="allpla\misex1.pla" />
+    <None Include="allpla\misex2.pla" />
+    <None Include="allpla\misex3.pla" />
+    <None Include="allpla\misex3c.pla" />
+    <None Include="allpla\misg.pla" />
+    <None Include="allpla\mish.pla" />
+    <None Include="allpla\misj.pla" />
+    <None Include="allpla\mlp4.pla" />
+    <None Include="allpla\mp2d.pla" />
+    <None Include="allpla\mux.pla" />
+    <None Include="allpla\mytest.pla" />
+    <None Include="allpla\mytest2.pla" />
+    <None Include="allpla\mytest3.pla" />
+    <None Include="allpla\newapla.pla" />
+    <None Include="allpla\newapla1.pla" />
+    <None Include="allpla\newapla2.pla" />
+    <None Include="allpla\newbyte.pla" />
+    <None Include="allpla\newcond.pla" />
+    <None Include="allpla\newcpla1.pla" />
+    <None Include="allpla\newcpla2.pla" />
+    <None Include="allpla\newcwp.pla" />
+    <None Include="allpla\newill.pla" />
+    <None Include="allpla\newtag.pla" />
+    <None Include="allpla\newtpla.pla" />
+    <None Include="allpla\newtpla1.pla" />
+    <None Include="allpla\newtpla2.pla" />
+    <None Include="allpla\newxcpla1.pla" />
+    <None Include="allpla\nexp.pla" />
+    <None Include="allpla\opa.pla" />
+    <None Include="allpla\p82.pla" />
+    <None Include="allpla\pcle.pla" />
+    <None Include="allpla\pcler8.pla" />
+    <None Include="allpla\pdc.pla" />
+    <None Include="allpla\pm1.pla" />
+    <None Include="allpla\pope.pla" />
+    <None Include="allpla\prom1.pla" />
+    <None Include="allpla\prom2.pla" />
+    <None Include="allpla\rd53.pla" />
+    <None Include="allpla\rd73.pla" />
+    <None Include="allpla\rd84.pla" />
+    <None Include="allpla\risc.pla" />
+    <None Include="allpla\root.pla" />
+    <None Include="allpla\ryy6.pla" />
+    <None Include="allpla\s420_z.pla" />
+    <None Include="allpla\s838_z.pla" />
+    <None Include="allpla\sao2.pla" />
+    <None Include="allpla\sct.pla" />
+    <None Include="allpla\seq.pla" />
+    <None Include="allpla\sex.pla" />
+    <None Include="allpla\shift.pla" />
+    <None Include="allpla\signet.pla" />
+    <None Include="allpla\soar.pla" />
+    <None Include="allpla\soar_m.pla" />
+    <None Include="allpla\spla.pla" />
+    <None Include="allpla\spla_m.pla" />
+    <None Include="allpla\sqn.pla" />
+    <None Include="allpla\sqr6.pla" />
+    <None Include="allpla\sqrt8.pla" />
+    <None Include="allpla\squar5.pla" />
+    <None Include="allpla\t1.pla" />
+    <None Include="allpla\t2.pla" />
+    <None Include="allpla\t3.pla" />
+    <None Include="allpla\t4.pla" />
+    <None Include="allpla\t481.pla" />
+    <None Include="allpla\table3.pla" />
+    <None Include="allpla\table5.pla" />
+    <None Include="allpla\tcheck.pla" />
+    <None Include="allpla\tcon.pla" />
+    <None Include="allpla\term1.pla" />
+    <None Include="allpla\test2.pla" />
+    <None Include="allpla\test2_m.pla" />
+    <None Include="allpla\test3.pla" />
+    <None Include="allpla\ti.pla" />
+    <None Include="allpla\tms.pla" />
+    <None Include="allpla\too_large.pla" />
+    <None Include="allpla\ts10.pla" />
+    <None Include="allpla\ttt2.pla" />
+    <None Include="allpla\unreg.pla" />
+    <None Include="allpla\vda.pla" />
+    <None Include="allpla\vg2.pla" />
+    <None Include="allpla\vtx1.pla" />
+    <None Include="allpla\wim.pla" />
+    <None Include="allpla\x1.pla" />
+    <None Include="allpla\x1dn.pla" />
+    <None Include="allpla\x2.pla" />
+    <None Include="allpla\x2dn.pla" />
+    <None Include="allpla\x3.pla" />
+    <None Include="allpla\x4.pla" />
+    <None Include="allpla\x6dn.pla" />
+    <None Include="allpla\x7dn.pla" />
+    <None Include="allpla\x9dn.pla" />
+    <None Include="allpla\xor5.pla" />
+    <None Include="allpla\xparc.pla" />
+    <None Include="allpla\z4ml.pla" />
+    <None Include="allpla\Z5xp1.pla" />
+    <None Include="allpla\Z9sym.pla" />
+    <None Include="espresso\lib\ESPRESSO.idb" />
+    <None Include="espresso\lib\ESPRESSO.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="espresso\lib\ESPRESSO.lib" />
+    <Library Include="oneapi\lib\ia32\tbb.lib" />
+    <Library Include="oneapi\lib\ia32\tbb12.lib" />
+    <Library Include="oneapi\lib\ia32\tbb12_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_0.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_0_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_5.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_5_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc_proxy.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc_proxy_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbb_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbb.lib" />
+    <Library Include="oneapi\lib\intel64\tbb12.lib" />
+    <Library Include="oneapi\lib\intel64\tbb12_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_0.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_0_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_5.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_5_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc_proxy.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc_proxy_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbb_debug.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="allpla\list.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

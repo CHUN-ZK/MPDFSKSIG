@@ -1,0 +1,908 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="來源檔案">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="espresso\src\black_white.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\canonical.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cofactor.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cols.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\compl.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\contain.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cpu_time.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cubestr.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cvrin.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cvrm.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cvrmisc.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\cvrout.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\dominate.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\equiv.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\espresso.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\essen.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\essentiality.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\exact.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\expand.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\gasp.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\gimpel.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\globals.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\hack.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\indep.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\irred.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\map.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\matrix.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\mincov.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\opo.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\pair.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\part.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\primes.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\prtime.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\readfile.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\reduce.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\rows.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\set.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\setc.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\sharp.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\sigma.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\signature.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\signature_exact.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\sminterf.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\solution.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\sparse.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\strdup.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\unate.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\util_signature.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="espresso\src\verify.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppsym.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\experiment.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GPLA.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ksig.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ompsym.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\symmetry.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tbbsym.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testingcppsym.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tool.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="espresso\src\copyright.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\espresso.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\mincov.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\mincov_int.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\port.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\signature.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\sparse.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\sparse_int.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\strdup.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="espresso\src\utility.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_range.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_range2d.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_range3d.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\blocked_rangeNd.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\cache_aligned_allocator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\collaborative_call_once.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\combinable.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_hash_map.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_lru_cache.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_map.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_priority_queue.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_queue.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_set.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_unordered_map.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_unordered_set.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\concurrent_vector.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_aggregator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_aligned_space.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_allocator_traits.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_assert.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_attach.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_concurrent_queue_base.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_concurrent_skip_list.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_concurrent_unordered_base.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_config.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_containers_helpers.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_exception.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_export.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_body_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_cache_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_indexer_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_item_buffer_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_join_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_nodes_deduction.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_node_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_node_set_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_tagged_buffer_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_trace_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_flow_graph_types_impl.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_hash_compare.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_intrusive_list_node.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_machine.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_mutex_common.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_namespace_injection.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_node_handle.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_pipeline_filters.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_pipeline_filters_deduction.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_range_common.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_rtm_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_rtm_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_scoped_lock.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_segment_table.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_small_object_pool.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_string_resource.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_task.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_task_handle.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_template_helpers.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_utils.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\detail\_waitable_atomic.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\enumerable_thread_specific.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\flow_graph.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\flow_graph_abstractions.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\global_control.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\info.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\memory_pool.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\null_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\null_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_for.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_for_each.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_invoke.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_pipeline.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_reduce.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_scan.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\parallel_sort.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\partitioner.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\profiling.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\queuing_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\queuing_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\scalable_allocator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\spin_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\spin_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\task.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\task_arena.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\task_group.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\task_scheduler_observer.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\tbbmalloc_proxy.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\tbb_allocator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\tick_count.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\oneapi\tbb\version.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\blocked_range.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\blocked_range2d.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\blocked_range3d.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\blocked_rangeNd.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\cache_aligned_allocator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\collaborative_call_once.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\combinable.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_hash_map.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_lru_cache.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_map.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_priority_queue.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_queue.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_set.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_unordered_map.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_unordered_set.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\concurrent_vector.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\enumerable_thread_specific.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\flow_graph.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\flow_graph_abstractions.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\global_control.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\info.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\memory_pool.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\null_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\null_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_for.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_for_each.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_invoke.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_pipeline.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_reduce.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_scan.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\parallel_sort.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\partitioner.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\profiling.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\queuing_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\queuing_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\scalable_allocator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\spin_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\spin_rw_mutex.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\task.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\task_arena.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\task_group.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\task_scheduler_observer.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\tbb.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\tbbmalloc_proxy.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\tbb_allocator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\tick_count.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="oneapi\include\tbb\version.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="espresso\lib\ESPRESSO.lib" />
+    <Library Include="oneapi\lib\ia32\tbb.lib" />
+    <Library Include="oneapi\lib\ia32\tbb12.lib" />
+    <Library Include="oneapi\lib\ia32\tbb12_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_0.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_0_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_5.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_2_5_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbbind_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc_proxy.lib" />
+    <Library Include="oneapi\lib\ia32\tbbmalloc_proxy_debug.lib" />
+    <Library Include="oneapi\lib\ia32\tbb_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbb.lib" />
+    <Library Include="oneapi\lib\intel64\tbb12.lib" />
+    <Library Include="oneapi\lib\intel64\tbb12_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_0.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_0_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_5.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_2_5_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbbind_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc_proxy.lib" />
+    <Library Include="oneapi\lib\intel64\tbbmalloc_proxy_debug.lib" />
+    <Library Include="oneapi\lib\intel64\tbb_debug.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="espresso\lib\ESPRESSO.idb" />
+    <None Include="espresso\lib\ESPRESSO.pdb" />
+    <None Include="allpla\5xp1.pla" />
+    <None Include="allpla\9sym.pla" />
+    <None Include="allpla\al2.pla" />
+    <None Include="allpla\alcom.pla" />
+    <None Include="allpla\allc1908_g51.pla" />
+    <None Include="allpla\alu1.pla" />
+    <None Include="allpla\alu2.pla" />
+    <None Include="allpla\alu3.pla" />
+    <None Include="allpla\alu4.pla" />
+    <None Include="allpla\amd.pla" />
+    <None Include="allpla\apex1.pla" />
+    <None Include="allpla\apex2.pla" />
+    <None Include="allpla\apex3.pla" />
+    <None Include="allpla\apex4.pla" />
+    <None Include="allpla\apex5.pla" />
+    <None Include="allpla\apex6.pla" />
+    <None Include="allpla\apex7.pla" />
+    <None Include="allpla\apla.pla" />
+    <None Include="allpla\b1.pla" />
+    <None Include="allpla\b2.pla" />
+    <None Include="allpla\b3.pla" />
+    <None Include="allpla\b4.pla" />
+    <None Include="allpla\b7.pla" />
+    <None Include="allpla\b9.pla" />
+    <None Include="allpla\b10.pla" />
+    <None Include="allpla\b11.pla" />
+    <None Include="allpla\b12.pla" />
+    <None Include="allpla\bc0.pla" />
+    <None Include="allpla\bca.pla" />
+    <None Include="allpla\bcb.pla" />
+    <None Include="allpla\bcc.pla" />
+    <None Include="allpla\bcd.pla" />
+    <None Include="allpla\br1.pla" />
+    <None Include="allpla\br2.pla" />
+    <None Include="allpla\bw.pla" />
+    <None Include="allpla\c8.pla" />
+    <None Include="allpla\C17.pla" />
+    <None Include="allpla\c1908_g51.pla" />
+    <None Include="allpla\c3540_g409.pla" />
+    <None Include="allpla\cc.pla" />
+    <None Include="allpla\check.pla" />
+    <None Include="allpla\check~.pla" />
+    <None Include="allpla\check2.pla" />
+    <None Include="allpla\chkn.pla" />
+    <None Include="allpla\cht.pla" />
+    <None Include="allpla\clip.pla" />
+    <None Include="allpla\clpl.pla" />
+    <None Include="allpla\cm42a.pla" />
+    <None Include="allpla\cm82a.pla" />
+    <None Include="allpla\cm85a.pla" />
+    <None Include="allpla\cm138a.pla" />
+    <None Include="allpla\cm150a.pla" />
+    <None Include="allpla\cm151a.pla" />
+    <None Include="allpla\cm152a.pla" />
+    <None Include="allpla\cm162a.pla" />
+    <None Include="allpla\cm163a.pla" />
+    <None Include="allpla\cmb.pla" />
+    <None Include="allpla\con1.pla" />
+    <None Include="allpla\cordic.pla" />
+    <None Include="allpla\count.pla" />
+    <None Include="allpla\cps.pla" />
+    <None Include="allpla\cu.pla" />
+    <None Include="allpla\dalu.pla" />
+    <None Include="allpla\dc1.pla" />
+    <None Include="allpla\dc2.pla" />
+    <None Include="allpla\dekoder.pla" />
+    <None Include="allpla\dist.pla" />
+    <None Include="allpla\dk17.pla" />
+    <None Include="allpla\dk27.pla" />
+    <None Include="allpla\dk48.pla" />
+    <None Include="allpla\duke2.pla" />
+    <None Include="allpla\e64.pla" />
+    <None Include="allpla\ex4.pla" />
+    <None Include="allpla\ex5.pla" />
+    <None Include="allpla\ex7.pla" />
+    <None Include="allpla\ex1010.pla" />
+    <None Include="allpla\example2.pla" />
+    <None Include="allpla\exep.pla" />
+    <None Include="allpla\exp.pla" />
+    <None Include="allpla\exps.pla" />
+    <None Include="allpla\f51m.pla" />
+    <None Include="allpla\frg1.pla" />
+    <None Include="allpla\frg2.pla" />
+    <None Include="allpla\gary.pla" />
+    <None Include="allpla\i2.pla" />
+    <None Include="allpla\i5.pla" />
+    <None Include="allpla\i6.pla" />
+    <None Include="allpla\i7.pla" />
+    <None Include="allpla\i8.pla" />
+    <None Include="allpla\i9.pla" />
+    <None Include="allpla\ibm.pla" />
+    <None Include="allpla\in0.pla" />
+    <None Include="allpla\in1.pla" />
+    <None Include="allpla\in2.pla" />
+    <None Include="allpla\in3.pla" />
+    <None Include="allpla\in4.pla" />
+    <None Include="allpla\in5.pla" />
+    <None Include="allpla\in6.pla" />
+    <None Include="allpla\in7.pla" />
+    <None Include="allpla\inc.pla" />
+    <None Include="allpla\intb.pla" />
+    <None Include="allpla\jbp.pla" />
+    <None Include="allpla\k2.pla" />
+    <None Include="allpla\lal.pla" />
+    <None Include="allpla\lin.pla" />
+    <None Include="allpla\list.bat">
+      <Filter>來源檔案</Filter>
+    </None>
+    <None Include="allpla\luc.pla" />
+    <None Include="allpla\m1.pla" />
+    <None Include="allpla\m2.pla" />
+    <None Include="allpla\m3.pla" />
+    <None Include="allpla\m4.pla" />
+    <None Include="allpla\mainpla.pla" />
+    <None Include="allpla\majority.pla" />
+    <None Include="allpla\mark1.pla" />
+    <None Include="allpla\max46.pla" />
+    <None Include="allpla\max128.pla" />
+    <None Include="allpla\max512.pla" />
+    <None Include="allpla\max1024.pla" />
+    <None Include="allpla\misex1.pla" />
+    <None Include="allpla\misex2.pla" />
+    <None Include="allpla\misex3.pla" />
+    <None Include="allpla\misex3c.pla" />
+    <None Include="allpla\misg.pla" />
+    <None Include="allpla\mish.pla" />
+    <None Include="allpla\misj.pla" />
+    <None Include="allpla\mlp4.pla" />
+    <None Include="allpla\mp2d.pla" />
+    <None Include="allpla\mux.pla" />
+    <None Include="allpla\mytest.pla" />
+    <None Include="allpla\mytest2.pla" />
+    <None Include="allpla\mytest3.pla" />
+    <None Include="allpla\newapla.pla" />
+    <None Include="allpla\newapla1.pla" />
+    <None Include="allpla\newapla2.pla" />
+    <None Include="allpla\newbyte.pla" />
+    <None Include="allpla\newcond.pla" />
+    <None Include="allpla\newcpla1.pla" />
+    <None Include="allpla\newcpla2.pla" />
+    <None Include="allpla\newcwp.pla" />
+    <None Include="allpla\newill.pla" />
+    <None Include="allpla\newtag.pla" />
+    <None Include="allpla\newtpla.pla" />
+    <None Include="allpla\newtpla1.pla" />
+    <None Include="allpla\newtpla2.pla" />
+    <None Include="allpla\newxcpla1.pla" />
+    <None Include="allpla\nexp.pla" />
+    <None Include="allpla\opa.pla" />
+    <None Include="allpla\p82.pla" />
+    <None Include="allpla\pcle.pla" />
+    <None Include="allpla\pcler8.pla" />
+    <None Include="allpla\pdc.pla" />
+    <None Include="allpla\pm1.pla" />
+    <None Include="allpla\pope.pla" />
+    <None Include="allpla\prom1.pla" />
+    <None Include="allpla\prom2.pla" />
+    <None Include="allpla\rd53.pla" />
+    <None Include="allpla\rd73.pla" />
+    <None Include="allpla\rd84.pla" />
+    <None Include="allpla\risc.pla" />
+    <None Include="allpla\root.pla" />
+    <None Include="allpla\ryy6.pla" />
+    <None Include="allpla\s420_z.pla" />
+    <None Include="allpla\s838_z.pla" />
+    <None Include="allpla\sao2.pla" />
+    <None Include="allpla\sct.pla" />
+    <None Include="allpla\seq.pla" />
+    <None Include="allpla\sex.pla" />
+    <None Include="allpla\shift.pla" />
+    <None Include="allpla\signet.pla" />
+    <None Include="allpla\soar.pla" />
+    <None Include="allpla\soar_m.pla" />
+    <None Include="allpla\spla.pla" />
+    <None Include="allpla\spla_m.pla" />
+    <None Include="allpla\sqn.pla" />
+    <None Include="allpla\sqr6.pla" />
+    <None Include="allpla\sqrt8.pla" />
+    <None Include="allpla\squar5.pla" />
+    <None Include="allpla\t1.pla" />
+    <None Include="allpla\t2.pla" />
+    <None Include="allpla\t3.pla" />
+    <None Include="allpla\t4.pla" />
+    <None Include="allpla\t481.pla" />
+    <None Include="allpla\table3.pla" />
+    <None Include="allpla\table5.pla" />
+    <None Include="allpla\tcheck.pla" />
+    <None Include="allpla\tcon.pla" />
+    <None Include="allpla\term1.pla" />
+    <None Include="allpla\test2.pla" />
+    <None Include="allpla\test2_m.pla" />
+    <None Include="allpla\test3.pla" />
+    <None Include="allpla\ti.pla" />
+    <None Include="allpla\tms.pla" />
+    <None Include="allpla\too_large.pla" />
+    <None Include="allpla\ts10.pla" />
+    <None Include="allpla\ttt2.pla" />
+    <None Include="allpla\unreg.pla" />
+    <None Include="allpla\vda.pla" />
+    <None Include="allpla\vg2.pla" />
+    <None Include="allpla\vtx1.pla" />
+    <None Include="allpla\wim.pla" />
+    <None Include="allpla\x1.pla" />
+    <None Include="allpla\x1dn.pla" />
+    <None Include="allpla\x2.pla" />
+    <None Include="allpla\x2dn.pla" />
+    <None Include="allpla\x3.pla" />
+    <None Include="allpla\x4.pla" />
+    <None Include="allpla\x6dn.pla" />
+    <None Include="allpla\x7dn.pla" />
+    <None Include="allpla\x9dn.pla" />
+    <None Include="allpla\xor5.pla" />
+    <None Include="allpla\xparc.pla" />
+    <None Include="allpla\z4ml.pla" />
+    <None Include="allpla\Z5xp1.pla" />
+    <None Include="allpla\Z9sym.pla" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="allpla\list.txt" />
+  </ItemGroup>
+</Project>
