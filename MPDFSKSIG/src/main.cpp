@@ -115,7 +115,7 @@ void get_PLA(char* PLA_address, int pla_type, pPLA* PLA) {
 	filename = (*PLA)->filename;
 }
 
-void general_PLA(pPLA pla, char* filename, int sym, int input, int output, int onset_size, int offset_size, int hd3) {
+void general_PLA(pPLA& pla, char* filename, int sym, int input, int output, int onset_size, int offset_size, int hd3) {
 
 	general_setup(input, output);
 
@@ -342,7 +342,7 @@ int main(int argc, char** argv) {
 	if (general_pla) {
 		if (verbose)
 			printf("GENERAL PLA,\nSYM = %s, \nInput = %d, \nOuput = 1, \nOnset size = %d, \nOffset size = %d, \nHD<3 size  = %d, \n", sym ? "Sym" : "Non-Sym", input_size, onset_size, offset_size, hd3);
-		general_PLA(PLA, argv[optind++], sym, input_size, 1, onset_size, offset_size, hd3);
+		general_PLA(PLA, argv[optind - 1], sym, input_size, 1, onset_size, offset_size, hd3);
 	}
 	else {
 		get_PLA(argv[optind - 1], pla_type, &PLA);
