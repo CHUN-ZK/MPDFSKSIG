@@ -1,6 +1,7 @@
 # MPDFSKSIG
 
-布林函數對稱性偵測與K-特徵值計算的多執行緒編程  Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Signatures
+布林函數對稱性偵測與K-特徵值計算的多執行緒編程  
+Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Signatures
 
 # 使用說明
 
