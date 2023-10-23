@@ -1,7 +1,9 @@
 # MPDFSKSIG
+
 布林函數對稱性偵測與K-特徵值計算的多執行緒編程(Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Signatures)
 
 #使用說明
+
 -D 使用子命令
   sym 對輸入或生成電路進行對稱檢查
   ksig 對輸入電路進行K-特徵值計算，生成電路不可使用
@@ -56,6 +58,7 @@
 在生成電路的情況下，將會把生成的電路寫入到輸入的pla檔中
 
 #使用Library
+
 Espresso
 Library來源為: https://github.com/Gigantua/Espresso
 
