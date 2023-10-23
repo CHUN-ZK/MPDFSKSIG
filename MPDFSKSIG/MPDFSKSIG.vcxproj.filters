@@ -174,9 +174,6 @@
     <ClCompile Include="src\ksig.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>來源檔案</Filter>
-    </ClCompile>
     <ClCompile Include="src\ompsym.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
@@ -190,6 +187,9 @@
       <Filter>來源檔案</Filter>
     </ClCompile>
     <ClCompile Include="src\tool.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
   </ItemGroup>

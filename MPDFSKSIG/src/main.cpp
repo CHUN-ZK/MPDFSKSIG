@@ -12,7 +12,7 @@ string optarg, optarg2;                /* argument associated with option */
 #define BADARG  (int)':'
 #define EMSG    ""
 
-/*è®€å–åƒæ•¸*/
+/*Åª¨ú°Ñ¼Æ*/
 int getopt(int nargc, char* const nargv[], const char* ostr)
 {
 	static char* place = (char*)EMSG;              /* option letter processing */
@@ -87,7 +87,7 @@ int getopt(int nargc, char* const nargv[], const char* ostr)
 	return (optopt);                        /* dump back option letter */
 }
 
-/*è®€å–PLAæª”*/
+/*Åª¨úPLAÀÉ*/
 void get_PLA(char* PLA_address, int pla_type, pPLA* PLA) {
 	int input_type = FD_type;
 	int out_type = F_type;
@@ -103,11 +103,11 @@ void get_PLA(char* PLA_address, int pla_type, pPLA* PLA) {
 
 	}
 	if ((fp = fopen(PLA_address, "r")) == NULL) {
-		fprintf(stderr, "ç„¡æ³•é–‹å•Ÿ %s\n", PLA_address);
+		fprintf(stderr, "µLªk¶}±Ò %s\n", PLA_address);
 		exit(1);
 	}
 	if (read_pla(fp, needs_dcset, needs_offset, input_type, PLA) == EOF) {
-		fprintf(stderr, "ç„¡æ³•æ‰¾åˆ°%sçš„ä½ç½®\n", PLA_address);
+		fprintf(stderr, "µLªk§ä¨ì%sªº¦ì¸m\n", PLA_address);
 		exit(1);
 	}
 
@@ -127,10 +127,10 @@ void general_PLA(pPLA& pla, char* filename, int sym, int input, int output, int 
 	pla->F = sf_new(onset_size, input * 2 + 1);
 	pla->R = sf_new(offset_size, input * 2 + 1);
 
-	if (sym == SYM) { //ç”Ÿæˆéš¨æ©Ÿé›»è·¯
+	if (sym == SYM) { //¥Í¦¨ÀH¾÷¹q¸ô
 		GeneralPLA_allrandom(pla->F, pla->R, input, onset_size, offset_size, hd3);
 	}
-	else { //ç”Ÿæˆæ²’æœ‰å‡½æ•¸å°ç¨±æ€§é›»è·¯
+	else { //¥Í¦¨¨S¦³¨ç¼Æ¹ïºÙ©Ê¹q¸ô
 
 		while (!GeneralPLA_nonSym(pla->F, pla->R, input, onset_size, offset_size, hd3)) {
 			sf_free(pla->F);
@@ -176,35 +176,35 @@ int trans_strnum(string num) {
 int main(int argc, char** argv) {
 	int i, j;
 
-	int option = 0; /* default -D: å°ç¨±é…å°æª¢æŸ¥ */
+	int option = 0; /* default -D: ¹ïºÙ°t¹ïÀË¬d */
 	int pla_type = FD_type; /* default -R: CSF(completely specify function) */
 
-	int method = DCP; /* default -M: å¯¦ä½œæ–¹æ³•ç‚ºå…¨éƒ¨*/
+	int method = DCP; /* default -M: ¹ê§@¤èªk¬°¥ş³¡*/
 
-	/*å°ç¨±æª¢æŸ¥*/
-	int tsize = thread::hardware_concurrency(); /* default -t: æœ€å¤§å¯ç”¨åŸ·è¡Œç·’æ•¸é‡ */
+	/*¹ïºÙÀË¬d*/
+	int tsize = thread::hardware_concurrency(); /* default -t: ³Ì¤j¥i¥Î°õ¦æºü¼Æ¶q */
 	int chunk_row = 200; /* -c: chunk_row chunk_col , default 200 X 200 */
 	int chunk_col = 200;
-	int ordering = 1; /* default -o: ä»¥æ–œå‘çš„æ–¹å¼å°‡è³‡æ–™å¡Šæ”¾å…¥å·¥ä½œä½‡åˆ— */
+	int ordering = 1; /* default -o: ¥H±×¦Vªº¤è¦¡±N¸ê®Æ¶ô©ñ¤J¤u§@¦î¦C */
 
-	/*K-ç‰¹å¾µå€¼è¨ˆç®—*/
-	int KSIG = ALL; /* default -K: è¨ˆç®—KSOèˆ‡KSI */
+	/*K-¯S¼x­È­pºâ*/
+	int KSIG = ALL; /* default -K: ­pºâKSO»PKSI */
 
-	/*ç”Ÿæˆé›»è·¯*/
-	int general_pla = FALSE; /* default -G: ä¸ä½¿ç”¨ç”Ÿæˆçš„é›»è·¯é€²è¡Œå¯¦é©— */
-	int sym = SYM; /* default -S: ç”Ÿæˆæœ‰å°ç¨±çš„é›»è·¯*/
-	int input_size = 1000; /* -i: ç”Ÿæˆé›»è·¯çš„è¼¸å…¥æ•¸é‡ */
-	int output_size = 1; /* ç”Ÿæˆé›»è·¯çš„è¼¸å‡ºæ•¸é‡å›ºå®šç‚º1 */
-	int onset_size = 10000; /*  -f: ç”Ÿæˆé›»è·¯çš„onsetç©é …æ•¸é‡ */
-	int offset_size = 10000; /*  -r: ç”Ÿæˆé›»è·¯çš„offsetç©é …æ•¸é‡ */
-	int hd3 = 1000; /* -h: ç”Ÿæˆé›»è·¯ä¸­HDå°æ–¼3çš„ç©é …é…å°æ•¸é‡ */
+	/*¥Í¦¨¹q¸ô*/
+	int general_pla = FALSE; /* default -G: ¤£¨Ï¥Î¥Í¦¨ªº¹q¸ô¶i¦æ¹êÅç */
+	int sym = SYM; /* default -S: ¥Í¦¨¦³¹ïºÙªº¹q¸ô*/
+	int input_size = 1000; /* -i: ¥Í¦¨¹q¸ôªº¿é¤J¼Æ¶q */
+	int output_size = 1; /* ¥Í¦¨¹q¸ôªº¿é¥X¼Æ¶q©T©w¬°1 */
+	int onset_size = 10000; /*  -f: ¥Í¦¨¹q¸ôªºonset¿n¶µ¼Æ¶q */
+	int offset_size = 10000; /*  -r: ¥Í¦¨¹q¸ôªºoffset¿n¶µ¼Æ¶q */
+	int hd3 = 1000; /* -h: ¥Í¦¨¹q¸ô¤¤HD¤p©ó3ªº¿n¶µ°t¹ï¼Æ¶q */
 
-	verbose = TRUE; /* default -v: è¼¸å‡ºç›®å‰å¯¦é©—çš„detail */
+	verbose = TRUE; /* default -v: ¿é¥X¥Ø«e¹êÅçªºdetail */
 
-	/*-------------------------------æŒ‡ä»¤åˆ¤å®š-------------------------------*/
+	/*-------------------------------«ü¥O§P©w-------------------------------*/
 	while ((i = getopt(argc, argv, "D:RM:t:c.o:K:GSi:f:r:h:v")) != EOF) {
 		switch (i) {
-		case 'D':		/* -D ä½¿ç”¨å­å‘½ä»¤(ä¾‹å¦‚:-D testsym ç”¨æ–¼ä½¿ç”¨naiveã€Intel TBBã€OpenMPèˆ‡Ourså°é›»è·¯é€²è¡Œå°ç¨±æª¢æŸ¥ä¸¦è¼¸å‡ºé‹è¡Œæ™‚é–“*/
+		case 'D':		/* -D ¹ïºÙÀË¬d(SYMMETRY)\K-¯S¼x­È­pºâ(KSIG) */
 			for (j = 0; j < size(option_table); j++) {
 				if (optarg == option_table[j].name) {
 					option = j;
@@ -212,16 +212,16 @@ int main(int argc, char** argv) {
 				}
 			}
 			if (j == size(option_table)) {
-				fprintf(stderr, "%s: ç„¡æ•ˆoptionæŒ‡ä»¤ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: µL®Äoption«ü¥O \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'R':		/* -R è¼¸å…¥PLAæ ¼å¼ */
-			pla_type = FR_type; /* è¼¸å…¥PLAç‚ºFR_type */
+		case 'R':		/* -R ¿é¤JPLA®æ¦¡ */
+			pla_type = FR_type; /* ¿é¤JPLA¬°FR_type */
 			break;
 
-		case 'M':		/* -M å¯¦ä½œæ–¹æ³• */
+		case 'M':		/* -M ¹ê§@¤èªk */
 			for (j = 0; j < size(implements_table); j++) {
 				if (optarg == implements_table[j].name) {
 					method = j;
@@ -229,15 +229,15 @@ int main(int argc, char** argv) {
 				}
 			}
 			if (j == size(implements_table)) {
-				fprintf(stderr, "%s: ç„¡æ•ˆçš„å¯¦ä½œæ–¹æ³• \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: µL®Äªº¹ê§@¤èªk \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 't':		/* -t æœ€å¤§å¯ç”¨åŸ·è¡Œç·’æ•¸é‡ */
+		case 't':		/* -t ³Ì¤j¥i¥Î°õ¦æºü¼Æ¶q */
 			tsize = trans_strnum(optarg);
 			if (tsize <= 0) {
-				fprintf(stderr, "%s: åŸ·è¡Œç·’æ•¸é‡åªèƒ½ç‚ºæ­£æ•´æ•¸ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: °õ¦æºü¼Æ¶q¥u¯à¬°¥¿¾ã¼Æ \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
@@ -245,12 +245,12 @@ int main(int argc, char** argv) {
 			chunk_row = trans_strnum(optarg);
 			chunk_col = trans_strnum(optarg2);
 			if (chunk_row <= 0 || chunk_col <= 0) {
-				fprintf(stderr, "%s: chunksizeåªèƒ½ç‚ºæ­£æ•´æ•¸ \"%s %s\"\n", argv[0], optarg.c_str(), optarg2.c_str());
+				fprintf(stderr, "%s: chunksize¥u¯à¬°¥¿¾ã¼Æ \"%s %s\"\n", argv[0], optarg.c_str(), optarg2.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'o':		/* -o è³‡æ–™å¡Šæ”¾å…¥å·¥ä½œä½‡åˆ—æ–¹å¼ */
+		case 'o':		/* -o ¸ê®Æ¶ô©ñ¤J¤u§@¦î¦C¤è¦¡ */
 			for (j = 0; j < size(ordering_table); j++) {
 				if (optarg == ordering_table[j].name) {
 					ordering = j;
@@ -258,12 +258,12 @@ int main(int argc, char** argv) {
 				}
 			}
 			if (j == size(ordering_table)) {
-				fprintf(stderr, "%s: ç„¡æ•ˆçš„è³‡æ–™å¡Šæ”¾å…¥å·¥ä½œä½‡åˆ—æ–¹æ³• \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: µL®Äªº¸ê®Æ¶ô©ñ¤J¤u§@¦î¦C¤èªk \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'K':		/* -K è¨ˆç®—K-ç‰¹å¾µå€¼çš„KSOæˆ–KSIæˆ–å…¨éƒ¨ */
+		case 'K':		/* -K ­pºâK-¯S¼x­ÈªºKSO©ÎKSI©Î¥ş³¡ */
 			for (j = 0; j < size(ksig_table); j++) {
 				if (optarg == ksig_table[j].name) {
 					KSIG = ksig_table[j].k_mode;
@@ -271,53 +271,53 @@ int main(int argc, char** argv) {
 				}
 			}
 			if (j == size(ksig_table)) {
-				fprintf(stderr, "%s: ç„¡æ•ˆçš„K-ç‰¹å¾µå€¼ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: µL®ÄªºK-¯S¼x­È \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'G':		/* -G ä½¿ç”¨ç”Ÿæˆçš„é›»è·¯é€²è¡Œå¯¦é©— */
+		case 'G':		/* -G ¨Ï¥Î¥Í¦¨ªº¹q¸ô¶i¦æ¹êÅç */
 			general_pla = TRUE;
 			break;
 
-		case 'S':		/* -S ç”Ÿæˆæ²’æœ‰å‡½æ•¸å°ç¨±æ€§çš„é›»è·¯é€²è¡Œå¯¦é©— */
+		case 'S':		/* -S ¥Í¦¨¨S¦³¨ç¼Æ¹ïºÙ©Êªº¹q¸ô¶i¦æ¹êÅç */
 			sym = NSYM;
 			break;
 
-		case 'i':		/* -i ç”Ÿæˆé›»è·¯çš„è¼¸å…¥æ•¸é‡ */
+		case 'i':		/* -i ¥Í¦¨¹q¸ôªº¿é¤J¼Æ¶q */
 			input_size = trans_strnum(optarg);
 			if (input_size <= 0) {
-				fprintf(stderr, "%s: ç”Ÿæˆé›»è·¯çš„è¼¸å…¥æ•¸é‡åªèƒ½ç‚ºæ­£æ•´æ•¸ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: ¥Í¦¨¹q¸ôªº¿é¤J¼Æ¶q¥u¯à¬°¥¿¾ã¼Æ \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'f':		/* -f ç”Ÿæˆé›»è·¯çš„onsetç©é …æ•¸é‡ */
+		case 'f':		/* -f ¥Í¦¨¹q¸ôªºonset¿n¶µ¼Æ¶q */
 			onset_size = trans_strnum(optarg);
 			if (onset_size <= 0) {
-				fprintf(stderr, "%s: ç”Ÿæˆé›»è·¯çš„onsetç©é …æ•¸é‡åªèƒ½ç‚ºæ­£æ•´æ•¸ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: ¥Í¦¨¹q¸ôªºonset¿n¶µ¼Æ¶q¥u¯à¬°¥¿¾ã¼Æ \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'r':		/* -r ç”Ÿæˆé›»è·¯çš„offsetç©é …æ•¸é‡ */
+		case 'r':		/* -r ¥Í¦¨¹q¸ôªºoffset¿n¶µ¼Æ¶q */
 			offset_size = trans_strnum(optarg);
 
 			if (offset_size <= 0) {
-				fprintf(stderr, "%s: ç”Ÿæˆé›»è·¯çš„offsetç©é …æ•¸é‡åªèƒ½ç‚ºæ­£æ•´æ•¸ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: ¥Í¦¨¹q¸ôªºoffset¿n¶µ¼Æ¶q¥u¯à¬°¥¿¾ã¼Æ \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'h':		/* -h ç”Ÿæˆé›»è·¯ä¸­HDå°æ–¼3çš„ç©é …é…å°æ•¸é‡ */
+		case 'h':		/* -h ¥Í¦¨¹q¸ô¤¤HD¤p©ó3ªº¿n¶µ°t¹ï¼Æ¶q */
 			hd3 = trans_strnum(optarg);
 			if (hd3 <= 0) {
-				fprintf(stderr, "%s: ç”Ÿæˆé›»è·¯ä¸­HDå°æ–¼3çš„ç©é …é…å°æ•¸é‡åªèƒ½ç‚ºæ­£æ•´æ•¸ \"%s\"\n", argv[0], optarg.c_str());
+				fprintf(stderr, "%s: ¥Í¦¨¹q¸ô¤¤HD¤p©ó3ªº¿n¶µ°t¹ï¼Æ¶q¥u¯à¬°¥¿¾ã¼Æ \"%s\"\n", argv[0], optarg.c_str());
 				exit(1);
 			}
 			break;
 
-		case 'v':		/* -v é—œé–‰è¼¸å‡ºçš„detail*/
+		case 'v':		/* -v Ãö³¬¿é¥Xªºdetail*/
 			verbose = FALSE;
 			break;
 
@@ -327,16 +327,16 @@ int main(int argc, char** argv) {
 	}
 
 	if ((general_pla || pla_type == FR_type) && option_table[option].name == "ksig") {
-		fprintf(stderr, "K-ç‰¹å¾µå€¼è¨ˆç®—ä¸å¯ä½¿ç”¨ç”Ÿæˆçš„é›»è·¯\n");
+		fprintf(stderr, "K-¯S¼x­È­pºâ¤£¥i¨Ï¥Î¥Í¦¨ªº¹q¸ô\n");
 		exit(1);
 	}
 
 	if (optind++ >= argc) {
-		fprintf(stderr, "ç„¡è¼¸å…¥é›»è·¯\n");
+		fprintf(stderr, "µL¿é¤J¹q¸ô\n");
 		exit(1);
 	}
 
-	/*-------------------------------è®€å–æˆ–ç”ŸæˆPLA-------------------------------*/
+	/*-------------------------------Åª¨ú©Î¥Í¦¨PLA-------------------------------*/
 
 	pPLA PLA = NIL(PLA_t);
 	if (general_pla) {
@@ -409,46 +409,46 @@ int main(int argc, char** argv) {
 
 	case KEY_TEST_SYM:
 		if (verbose)
-			printf("ä½¿ç”¨Naiveã€Intel TBBã€OpenMPèˆ‡DCP(unsort & sort)é€²è¡Œå°ç¨±æª¢æŸ¥å¯¦é©—, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s, \nthread_size = %d,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str(), tsize);
+			printf("¨Ï¥ÎNaive¡BIntel TBB¡BOpenMP»PDCP(unsort & sort)¶i¦æ¹ïºÙÀË¬d¹êÅç, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s, \nthread_size = %d,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str(), tsize);
 		symmetry_benchmarking(PLA->F, PLA->R, chunk_row, chunk_col, ordering, tsize);
 		break;
 
 	case KEY_TEST_LARGECIRCUIT:
 		if (verbose)
-			printf("ä½¿ç”¨Naiveã€Intel TBBã€OpenMPèˆ‡DCPé€²è¡Œå°ç¨±æª¢æŸ¥å¯¦é©—, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s, \nthread_size = %d,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str(), tsize);
+			printf("¨Ï¥ÎNaive¡BIntel TBB¡BOpenMP»PDCP¶i¦æ¹ïºÙÀË¬d¹êÅç, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s, \nthread_size = %d,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str(), tsize);
 		symmetry_LargeCircuit(PLA->F, PLA->R, chunk_row, chunk_col, ordering, tsize);
 		break;
 
 	case KEY_TEST_KSIG:
 		if (verbose)
-			printf("ä½¿ç”¨Naiveã€Intel TBBã€OpenMPèˆ‡DCPé€²è¡ŒK-ç‰¹å¾µå€¼å¯¦é©—, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s, \nthread_size = %d,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str(), tsize);
+			printf("¨Ï¥ÎNaive¡BIntel TBB¡BOpenMP»PDCP¶i¦æK-¯S¼x­È¹êÅç, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s, \nthread_size = %d,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str(), tsize);
 		cal_ksignature(PLA, KSIG);
 		break;
 
 	case KEY_CHUNK:
 		if (verbose)
-			printf("ä½¿ç”¨ä¸åŒchunksizeé€²è¡Œå°ç¨±æª¢æŸ¥å¯¦é©—, \nordering = %s, \nthread_size = %d,\n", ordering_table[ordering].full_name.c_str(), tsize);
+			printf("¨Ï¥Î¤£¦Pchunksize¶i¦æ¹ïºÙÀË¬d¹êÅç, \nordering = %s, \nthread_size = %d,\n", ordering_table[ordering].full_name.c_str(), tsize);
 
 		testing_chunksize(PLA->F, PLA->R, ordering, tsize);
 		break;
 
 	case KEY_THREAD:
 		if (verbose)
-			printf("ä½¿ç”¨ä¸åŒåŸ·è¡Œç·’æ•¸é‡é€²è¡Œå°ç¨±æª¢æŸ¥å¯¦é©—, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str());
+			printf("¨Ï¥Î¤£¦P°õ¦æºü¼Æ¶q¶i¦æ¹ïºÙÀË¬d¹êÅç, \nchunk_row = %d,\nchunk_col = %d, \nordering = %s,\n", chunk_row, chunk_col, ordering_table[ordering].full_name.c_str());
 
 		testing_threadnum(PLA->F, PLA->R, chunk_row, chunk_col, ordering);
 		break;
 
 	case KEY_ORDERING:
 		if (verbose)
-			printf("ä½¿ç”¨ä¸åŒè³‡æ–™å¡Šæ”¾å…¥å·¥ä½œä½‡åˆ—çš„æ–¹æ³•é€²è¡Œå°ç¨±æª¢æŸ¥å¯¦é©—, \nchunk_row = %d,\nchunk_col = %d, \nthread_size = %d,\n", chunk_row, chunk_col, tsize);
+			printf("¨Ï¥Î¤£¦P¸ê®Æ¶ô©ñ¤J¤u§@¦î¦Cªº¤èªk¶i¦æ¹ïºÙÀË¬d¹êÅç, \nchunk_row = %d,\nchunk_col = %d, \nthread_size = %d,\n", chunk_row, chunk_col, tsize);
 
 		testing_ordering(PLA->F, PLA->R, chunk_row, chunk_col, tsize);
 		break;
 
 	case KEY_SYMRATE:
 		if (verbose)
-			printf("ä½¿ç”¨å–®åŸ·è¡Œç·’å°è³‡æ–™å¡Šé€²è¡Œå°ç¨±æ€§ä¸‹é™æ¯”ä¾‹æª¢æŸ¥, \nchunk_row = %d,\nchunk_col = %d, \nthread_size = %d,\n", chunk_row, chunk_col, 1);
+			printf("¨Ï¥Î³æ°õ¦æºü¹ï¸ê®Æ¶ô¶i¦æ¹ïºÙ©Ê¤U­°¤ñ¨ÒÀË¬d, \nchunk_row = %d,\nchunk_col = %d, \nthread_size = %d,\n", chunk_row, chunk_col, 1);
 		testing_symrate(PLA->F, PLA->R, chunk_row, chunk_col, ordering);
 		break;
 	}
