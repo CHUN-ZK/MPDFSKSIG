@@ -63,11 +63,11 @@
 Library來源為: https://github.com/Gigantua/Espresso
 
 ## Intel TBB
-Library來源為: https://github.com/oneapi-src/oneTBB
+Library來源為: https://github.com/oneapi-src/oneTBB，
 使用的版本為oneapi-tbb-2021.9.0
 
 ## boost
-需自行安裝並配置，網址為 https://www.boost.org/
+需自行安裝並配置，網址為 https://www.boost.org/，
 使用的版本為boost_1_82_0
 
 # 聯絡
