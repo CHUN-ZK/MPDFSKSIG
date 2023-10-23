@@ -4,7 +4,7 @@
 
 # 使用說明
 
--D 使用子命令
+###-D 使用子命令
   - sym 對輸入或生成電路進行對稱檢查
   - ksig 對輸入電路進行K-特徵值計算，生成電路不可使用  
   - testsym 使用Naive、Intel TBB、OpenMP與DCP(Ours)對電路進行對稱檢查並輸出執行時間
