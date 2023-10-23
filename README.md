@@ -27,10 +27,10 @@
 -c 設定chunksize的大小，子命令testchunk不會使用此參數
   ex: -c 500 500 -> chunksize為500 * 500
 
--o 選擇使用的資料塊放入工作佇列方式
-  h 使用橫向(HORIZONTAL)的方式
-  d 使用斜向(DIAGONALLY)的方式
-  w 使用權重(WEIGHT)的方式
+-o 選擇使用的資料塊放入工作佇列方式\\
+  h 使用橫向(HORIZONTAL)的方式\\
+  d 使用斜向(DIAGONALLY)的方式\\
+  w 使用權重(WEIGHT)的方式\\
 
 -K 選擇K-特徵值(KSO或KSI)
   kso 計算KSO
