@@ -15,12 +15,12 @@ struct {
 } option_table[] = {
     {"symmetry", KEY_SYMMETRY},        /* 對稱配對檢查 */
     {"ksig", KEY_KSIG},                /* K-特徵值計算 */
-    {"testsym", KEY_TEST_SYM},         /* 對MCNC、ISCAS測試電路進行對稱檢查實驗 */
-    {"testLC", KEY_TEST_LARGECIRCUIT}, /* 對生成的大型電路進行對稱檢查實驗 */
-    {"testksig", KEY_TEST_KSIG},       /* 對MCNC測試電路進行K-特徵值實驗 */
-    {"testchunk", KEY_CHUNK},           /* 使用不同chunksize進行DCP對稱檢查實驗 */
-    {"testthread", KEY_THREAD},          /* 使用不同執行緒數量進行DCP對稱檢查實驗*/
-    {"testorder", KEY_ORDERING},        /* 使用不同資料塊放入工作佇列的方式進行DCP對稱檢查實驗*/
+    {"testsym", KEY_TEST_SYM},         /* 使用Naive、Intel TBB、OpenMP與DCP(unsort & sort)實作方法對MCNC、ISCAS測試電路對稱檢查實驗 */
+    {"testLC", KEY_TEST_LARGECIRCUIT}, /* 使用Naive、Intel TBB、OpenMP與DCP實作方法對生成的大型電路進行對稱檢查實驗 */
+    {"testksig", KEY_TEST_KSIG},       /* 使用Naive、Intel TBB、OpenMP與DCP實作方法對MCNC測試電路進行K-特徵值實驗 */
+    {"testchunk", KEY_CHUNK},          /* 使用不同chunksize進行DCP對稱檢查實驗 */
+    {"testthread", KEY_THREAD},        /* 使用不同執行緒數量進行DCP對稱檢查實驗*/
+    {"testorder", KEY_ORDERING},       /* 使用不同資料塊放入工作佇列的方式進行DCP對稱檢查實驗*/
     {"testrate", KEY_SYMRATE},         /* 使用單個執行緒依序執行資料塊移除對稱配對的比例實驗*/
 };
 

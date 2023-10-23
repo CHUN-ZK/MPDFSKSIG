@@ -204,7 +204,7 @@ int main(int argc, char** argv) {
 	/*-------------------------------指令判定-------------------------------*/
 	while ((i = getopt(argc, argv, "D:RM:t:c.o:K:GSi:f:r:h:v")) != EOF) {
 		switch (i) {
-		case 'D':		/* -D 對稱檢查(SYMMETRY)\K-特徵值計算(KSIG) */
+		case 'D':		/* -D 選擇子命令，可參考至main.h中的option_table */
 			for (j = 0; j < size(option_table); j++) {
 				if (optarg == option_table[j].name) {
 					option = j;
