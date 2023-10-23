@@ -13,6 +13,7 @@ Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Sign
   - testchunk -> 在使用DCP進行對稱檢查時，檢查多種chunksize對執行時間的影響 
   - testorder -> 在使用DCP進行對稱檢查時，檢查以橫向、斜向與權重的方式將資料塊放入工作佇列種對執行時間的影響
   - testksig -> 使用Naive、Intel TBB、OpenMP與DCP(Ours)對電路進行K-特徵值計算並輸出執行時間
+default = sym
 
 ## -R 輸入PLA格式更改為FR_type
 在輸入生成的電路時所使用
@@ -23,21 +24,26 @@ Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Sign
   - tbb -> 使用Intel TBB的實作方法
   - openMP -> 使用openMP的實作方法
   - dcp -> 使用DCP的實作方法
+default = dcp
 
 ## -t 設定最大的執行緒數量
-子命令testthread不會使用此參數，ex: -t 20 -> 最大執行緒數量為20
+子命令testthread不會使用此參數，ex: -t 20 -> 最大執行緒數量為20  
+default = 24
 
 ## -c 設定chunksize的大小
-子命令testchunk不會使用此參數，ex: -c 500 500 -> chunksize為500 * 500
+子命令testchunk不會使用此參數，ex: -c 500 500 -> chunksize為500 * 500  
+default = 200 * 200
 
 ## -o 選擇使用的資料塊放入工作佇列方式
-- h -> 使用橫向(HORIZONTAL)的方式
-- d -> 使用斜向(DIAGONALLY)的方式
-- w -> 使用權重(WEIGHT)的方式
+  - h -> 使用橫向(HORIZONTAL)的方式
+  - d -> 使用斜向(DIAGONALLY)的方式
+  - w -> 使用權重(WEIGHT)的方式
+default = d
 
 ## -K 選擇K-特徵值(KSO或KSI)
 - kso -> 計算KSO
 - ksi -> 計算KSI
+default = kso
 
 ## -G 選擇使用生成電路進行實驗
 計算K-特徵值的實驗皆不能使用
