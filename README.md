@@ -4,7 +4,7 @@
 
 # 使用說明
 
-### -D 使用子命令
+## -D 使用子命令
   - sym 對輸入或生成電路進行對稱檢查
   - ksig 對輸入電路進行K-特徵值計算，生成電路不可使用  
   - testsym 使用Naive、Intel TBB、OpenMP與DCP(Ours)對電路進行對稱檢查並輸出執行時間
@@ -13,7 +13,7 @@
   - testorder 在使用DCP進行對稱檢查時，檢查以橫向、斜向與權重的方式將資料塊放入工作佇列種對執行時間的影響
   - testksig 使用Naive、Intel TBB、OpenMP與DCP(Ours)對電路進行K-特徵值計算並輸出執行時間
 
-### -R 輸入PLA格式更改為FR_type
+## -R 輸入PLA格式更改為FR_type
 在輸入生成的電路時所使用
 
 ### -M 選擇實作的方法
