@@ -6,7 +6,7 @@ Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Sign
 # 使用說明
 
 ## -D 選擇子命令
-  - sym -> 對輸入或生成電路進行對稱檢查
+  - symmetry -> 對輸入或生成電路進行對稱檢查
   - ksig -> 對輸入電路進行K-特徵值計算，生成電路不可使用  
   - testsym -> 使用Naive、Intel TBB、OpenMP與DCP(Ours)對電路進行對稱檢查並輸出執行時間
   - testthread -> 在使用DCP進行對稱檢查時，檢查1、2、4、8、16與24個最大使用執行緒對執行時間的影響
