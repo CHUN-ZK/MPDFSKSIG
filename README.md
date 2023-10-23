@@ -2,7 +2,7 @@
 
 布林函數對稱性偵測與K-特徵值計算的多執行緒編程(Multithreaded Programming for Detectin Funtional Symmetries and Computing K-Signatures)
 
-#使用說明
+# 使用說明
 
 -D 使用子命令
   sym 對輸入或生成電路進行對稱檢查
@@ -57,18 +57,18 @@
 注意: 一定要輸入pla檔，且一定要放在參數的最後一位
 在生成電路的情況下，將會把生成的電路寫入到輸入的pla檔中
 
-#使用Library
+# 使用Library
 
-Espresso
+## Espresso
 Library來源為: https://github.com/Gigantua/Espresso
 
-Intel TBB
+## Intel TBB
 Library來源為: https://github.com/oneapi-src/oneTBB
 使用的版本為oneapi-tbb-2021.9.0
 
-boost
+## boost
 需自行安裝並配置，網址為 https://www.boost.org/
 使用的版本為boost_1_82_0
 
-#聯絡
+# 聯絡
 若有疑問，請寄信至f410226036@gmail.com
