@@ -20,40 +20,40 @@
   - tbb 使用Intel TBB的實作方法
   - openMP 使用openMP的實作方法
   - dcp 使用DCP的實作方法
-&emsp
+
 -t 設定最大的執行緒數量，子命令testthread不會使用此參數  
   ex: -t 20 -> 最大執行緒數量為20
-&emsp
+
 -c 設定chunksize的大小，子命令testchunk不會使用此參數  
   ex: -c 500 500 -> chunksize為500 * 500
-&emsp
+
 -o 選擇使用的資料塊放入工作佇列方式
 - h 使用橫向(HORIZONTAL)的方式
 - d 使用斜向(DIAGONALLY)的方式
 - w 使用權重(WEIGHT)的方式
-&emsp
+
 -K 選擇K-特徵值(KSO或KSI)
 - kso 計算KSO
 - ksi 計算KSI
-&emsp
+
 -G 選擇使用生成電路進行實驗，計算K-特徵值的實驗皆不能使用
-&emsp
+
 -S 生成沒有函數對稱性的電路。如果沒有輸入此參數，那將會生成有函數對稱性的電路
-&emsp
+
 -i 生成電路的輸入數量  
   ex: -i 1000 -> 輸入數量為1000
-&emsp
+
 -f 生成電路的on-set積項數量  
   ex: -f 5000 -> on-set積項數量為5000
-&emsp  
+ 
 -r 生成電路的off-set積項數量  
   ex: -r 5000 -> off-set積項數量為5000
-&emsp
+
 -h 生成電路中HD<3的積項配對數量  
   ex: -h 5000 -> HD<3的積項配對數量為5000
-&emsp
+
 -v 關閉輸出的detail。如果沒有輸入此參數，那輸出實驗的detail
-&emsp
+
 注意: 一定要輸入pla檔，且一定要放在參數的最後一位，在生成電路的情況下，將會把生成的電路寫入到輸入的pla檔中
 
 # 使用Library
