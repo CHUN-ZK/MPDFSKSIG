@@ -901,6 +901,7 @@
     <None Include="allpla\z4ml.pla" />
     <None Include="allpla\Z5xp1.pla" />
     <None Include="allpla\Z9sym.pla" />
+    <None Include="..\建置說明書.pptx" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="allpla\list.txt" />

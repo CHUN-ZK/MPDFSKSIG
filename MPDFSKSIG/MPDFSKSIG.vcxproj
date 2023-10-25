@@ -347,6 +347,7 @@
     <ClInclude Include="src\main.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\建置說明書.pptx" />
     <None Include="allpla\5xp1.pla" />
     <None Include="allpla\9sym.pla" />
     <None Include="allpla\al2.pla" />
